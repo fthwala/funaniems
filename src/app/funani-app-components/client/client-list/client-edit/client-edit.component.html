@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-md-12">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputClientNane">Client Name</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="name" 
+          placeholder="Enter Client Name"
+          #clientNameInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputSurname">Client Surname</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="Surname" 
+          placeholder="Enter Client Surname"
+          #clientSurnameInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCompany">Company</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="company" 
+          placeholder="Enter Company"
+          #companyInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" 
+          class="form-control" 
+          id="Email" 
+          aria-describedby="emailHelp" 
+          placeholder="Enter email"
+          #emailInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Phone</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="phone" 
+          placeholder="Enter Phone"
+          #phoneInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputProject">Project Name</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="projectName"  
+          placeholder="Enter Project Name"
+          #projectNameInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpd">Project Discription</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="projectDiscription" 
+          placeholder="Enter Project Discription"
+          #projectDescriptionInput>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Year</label>
+        <input 
+          type="date" 
+          class="form-control" 
+          id="year" 
+          placeholder="Enter Project Year"
+          #yearInput>
+      </div>
+      <div class="form-group">
+        <div class="dropdown"
+          appDropdown
+          #r="appDropDown">
+          <button 
+            class="btn btn-secondary dropdown-toggle" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false"
+            #offerNameInput>
+            Select an Offer
+          </button>
+          <div class="dropdown-menu" 
+            aria-labelledby="dropdownMenuButton"
+            [ngClass]="{'show':r.isOpen}"
+            (click)="onSelect()">
+            <a class="dropdown-item" href="#" *ngFor="let offer of offers">{{ offer.name }}</a>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Offer</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="year" 
+              placeholder="Select the Offer from the button above"
+              #offerValue>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      
+    
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-success" (click)="onAddItem()">Add</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-primary">Edit</button>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</div>
+

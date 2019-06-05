@@ -1,0 +1,19 @@
+
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onNewOffer()">New Offer</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+    
+      <app-offers-list-item 
+        *ngFor="let offerEl of offers; let i = index" 
+        [offer]="offerEl"
+        [index]="i"></app-offers-list-item>
+    </div>
+  </div>
+  
+  
+

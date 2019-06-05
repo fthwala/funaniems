@@ -1,0 +1,36 @@
+<!--<div class="row">
+  <div class="col-md-12">
+    <app-client-list-edit></app-client-list-edit>
+      <hr>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor: pointe"></a>
+    </ul>
+  </div>
+</div> -->
+
+<app-client-list-edit></app-client-list-edit>
+
+<div class="container">
+  <h2> Client Projects Table</h2>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Client</th>
+        <th>Project Name</th>
+        <th>Offer Name</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let client of clients"> 
+      <tr>
+        <td></td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.project }}</td>
+        <td>{{ client.offer }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+

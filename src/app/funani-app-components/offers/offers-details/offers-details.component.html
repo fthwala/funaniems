@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img 
+        [src]="offer.imagePath" 
+        alt="{{ offer.name }}" 
+        class="img-responsive"
+        style="max-height: 300px">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ offer.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group"
+      appDropdown
+      #r="appDropDown">
+        <button 
+          type="button" 
+          class="btn btn-primary dropdown-toggle">
+          Manage Offer<span class="caret"></span>
+        </button>
+      <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}" style="cursor: pointer;">
+        <li><a style="cursor: pointer;">To client list</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditOffer()">Edit Offer</a></li>
+        <li><a style="cursor: pointer;">Delete Offer</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+          {{ offer.description }}
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+          Offer
+        </div>
+      </div>
+
+
+      
+  
+  

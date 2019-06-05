@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-projects-list></app-projects-list>
+    </div>
+    <div class="col-md-7">
+       <router-outlet></router-outlet>
+    </div>
+</div> 
+
+
+<!--
+    <app-project-list-details 
+*ngIf="selectedProject; else infoText"
+[project]="selectedProject"></app-project-list-details>
+<ng-template #infoText>
+<p>Please select a Project</p>
+</ng-template>
+
+-->
